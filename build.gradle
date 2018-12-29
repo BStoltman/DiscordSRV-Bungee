@@ -26,8 +26,13 @@ plugins {
 
 def dsrvVersion = '2.0-RC1'
 
-group = 'com.discordsrv.sponge'
+group = 'com.discordsrv.bungee'
 version dsrvVersion
+
+import org.apache.tools.ant.filters.ReplaceTokens
+processResources {
+    filter(ReplaceTokens, tokens: ['VERSION': project.version])
+}
 
 defaultTasks 'clean', 'javadoc', 'check', 'build'
 

@@ -59,10 +59,10 @@ public class DSRVBungee extends Plugin implements Platform<BungeeContext> {
             if (!getDataFolder().exists()) {
                 getDataFolder().mkdir();
             }
-            URL defaultConfigUrl = getClass().getClassLoader().getResource("defaultConfig.yml");
-            URL protectedConfigUrl = getClass().getClassLoader().getResource("protectedConfig.yml");
-            URL configUrl = getClass().getClassLoader().getResource("config.yml");
-            File userConfig = new File(getDataFolder(), "config.yml");
+            URL defaultConfigUrl = getClass().getClassLoader().getResource("defaultConfig.yaml");
+            URL protectedConfigUrl = getClass().getClassLoader().getResource("protectedConfig.yaml");
+            URL configUrl = getClass().getClassLoader().getResource("config.yaml");
+            File userConfig = new File(getDataFolder(), "config.yaml");
             if (!userConfig.exists()) {
                 userConfig.createNewFile();
                 InputStream inputStream = defaultConfigUrl.openStream();
